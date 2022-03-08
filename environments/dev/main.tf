@@ -38,3 +38,9 @@ module "firewall" {
   project = "${var.project}"
   subnet  = "${module.vpc.subnet}"
 }
+
+module "kms" {
+  source  = "../../modules/kms"
+  project = "${var.project}"
+  subnet  = "${module.vpc.subnet}"
+}
